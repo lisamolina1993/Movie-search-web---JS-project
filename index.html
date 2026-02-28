@@ -10,14 +10,41 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="search__container">
-            <h1>Movie Search</h1>
-            <input type="text" id="searchInput" placeholder="Search for a movie...">
-            <button id="searchButton">Search</button>
-            <div id="results"></div>
+    <header>
+        <div class="container">
+            <div class="header__wrapper">
+                <h1 class="title">Movie Mania</h1>
+                <div class="search__container">
+                    <input class="search__input" type="text" id="searchInput"
+                        placeholder="Search for a movie's title part">
+                    <button id="searchButton">Search</button>
+                    <div id="results"></div>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <main id="movies__main">
+        <div class="container">
+            <div class="row">
+                <select id="filter">
+                    <option value="" disabled selected>Sort</option>
+                    <option value="Release Date, Newest"></option>
+                    <option value="Release Date, Oldest"></option>
+                    <option value="Movie title, A to Z"></option>
+                    <option value="Movie title, Z to A"></option>
+                </select>
+                <div class="movie__wrapper">
+                    <figure class="movie__list">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1_SX300.jpg"
+                            alt="Movie Poster">
+                        <figcaption class="fig__caption">Movie Title:</figcaption>
+                        <figcaption class="fig__caption">Year:</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

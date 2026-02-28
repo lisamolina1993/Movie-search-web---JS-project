@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-image: url("./background\ image\ copy.jpg");
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    margin: 96px 0;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 12px;
+    width: 100%;
+}
+
+/* HEADER */
+
+.header__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    max-width: 1200px;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+}
+
+.search__input {
+    border: none;
+    background-color: #f0f0f0;
+    width: 60%;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+}
+.search__input:focus {
+    border-color: #92b1d1;
+}
+
+.title {
+   color: aliceblue;
+   font-size: 80px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2c3a49;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #3a5774;
+}
+
+/* MAIN */
+
+#filter {
+    width: 20%;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.movie__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.fig__caption {
+    font-size: 24px;
+    color:aliceblue;
+    margin: 12px 0;
+    padding: 0 12px;
+}
+
+.movie__list {
+    border: #92b1d1 solid 1px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(23, 21, 21, 1);
+}
