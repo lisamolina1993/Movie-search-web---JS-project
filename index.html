@@ -15,6 +15,7 @@
         <div class="container">
             <div class="header__wrapper">
                 <h1 class="title">Movie Mania</h1>
+                <h2 class="subtitle">Find your favorite Movies</h2>
                 <div class="search__container">
                     <input class="search__input" type="text" id="searchInput"
                         placeholder="Search for a movie's title part">
@@ -27,19 +28,21 @@
 
     <main id="movies__main">
         <div class="container">
-            <div class="row results__wrapper">
-                <select id="filter" onchange="filterMovies(event)">
-                    <option value="" disabled selected>Sort</option>
-                    <option value="NEWEST_TO_OLDEST">Release Date, Newest</option>
-                    <option value="OLDEST_TO_NEWEST">Release Date, Oldest</option>
-                    <option value="TITLE_ASC">Movie title, A to Z</option>
-                    <option value="TITLE_DESC">Movie title, Z to A</option>
-                </select>
+            <div class="row">
+                <div class="results__wrapper">
+                    <select id="filter" onchange="filterMovies(event)">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="NEWEST_TO_OLDEST">Release Date, Newest</option>
+                        <option value="OLDEST_TO_NEWEST">Release Date, Oldest</option>
+                        <option value="TITLE_ASC">Movie title, A to Z</option>
+                        <option value="TITLE_DESC">Movie title, Z to A</option>
+                    </select>
+                </div>
                 <div class="results__loading">
                     <i class="fas fa-spinner results__loading--spinner"></i>
                 </div>
                 <div class="movies__wrapper">
-                   
+
                 </div>
             </div>
         </div>

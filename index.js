@@ -14,6 +14,8 @@ async function onSearchChange() {
     const moviesWrapper = document.querySelector(".movies__wrapper"); // Where movies will go/results will be rendered
     const loading = document.querySelector(".results__loading"); // The spinner container
 
+    const results = document.querySelector(".results__wrapper");
+
     if (!searchTerm) return; // if the search term is empty, do nothing
 
     loading.classList.add("modal__overlay--visible"); // Show the loading spinner
@@ -26,6 +28,8 @@ async function onSearchChange() {
         await sleep(2000); // Simulate loading delay
 
         loading.classList.remove("modal__overlay--visible"); //hides the spinner once the data arrives
+
+        results.classList.add("results__wrapper--visible"); 
 
         if (data.Response === "True") { // OMBd returns a string "True" if it found movies that match the search term, otherwise it returns "False"
             moviesData = data.Search; //Save the array of 10 movies into the global variable for later use in filtering
@@ -45,7 +49,7 @@ function renderMovies(movies) { // This function takes the raw data and turns it
         return `
             <figure class="movie__list">
                 <img src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Poster"}" alt="Movie Poster">
-                <figcaption class="fig__caption">${movie.Title}</figcaption>
+                <figcaption class="fig__caption fig__caption--title">${movie.Title}</figcaption>
                 <figcaption class="fig__caption">${movie.Year}</figcaption>
             </figure>
         `
