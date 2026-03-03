@@ -7,6 +7,9 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     background-image: url("./background\ image\ copy.jpg");
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Image stays fixed to the screen */
+    background-repeat: no-repeat; /* Ensures the image doesn't tile */
 }
 
 .container {
@@ -84,17 +87,18 @@ button:hover {
     margin-left: 50px;
 }
 
-.movie__wrapper {
+.movies__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
 .fig__caption {
-    font-size: 24px;
+    font-size: 20px;
     color:aliceblue;
     margin: 12px 0;
     padding: 0 12px;
+    text-align: center;
 }
 
 .movie__list {
@@ -102,4 +106,32 @@ button:hover {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(23, 21, 21, 1);
+}
+
+.results__loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 60px;
+    color:aliceblue;
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.results__loading.modal__overlay--visible {
+    display: flex;
+}
+
+.results__error {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
 }
