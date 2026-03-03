@@ -16,7 +16,10 @@ async function onSearchChange() {
 
     const results = document.querySelector(".results__wrapper");
 
-    if (!searchTerm) return; // if the search term is empty, do nothing
+    if (!searchTerm.trim()) { //trim removes any accidental spaces. If a user hits "space" and then "enter". trim() truns " " into "" which counts as empty
+        window.location.reload(); //tells the browse to do do exactly what the "refresh" button does- start the page over from scratch
+        return; //This is the "emergency exit". It makes sure that the page doesn't fetch data or show a spinner 
+    }
 
     loading.classList.add("modal__overlay--visible"); // Show the loading spinner
     moviesWrapper.innerHTML = ""; // Clears old movies so the new search starts fresh and doesn't just add on to the old results
