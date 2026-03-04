@@ -11,6 +11,48 @@
 </head>
 
 <body>
+    <nav>
+        <div class="row">
+            <div class="nav__wrapper">
+                <figure>
+                    <img class="logo" src=".//cinema-clapper-svgrepo-com.svg" alt="logo">
+                </figure>
+                <div class="nav__links">
+                    <ul class="nav__list">
+                        <li>
+                            <a class="nav__link nav__link--effect" href="#">Log in</a>
+                        </li>
+                        <li>
+                            <a class="nav__link nav__link--effect" href="#">Search</a>
+                        </li>
+                        <li>
+                            <a class="nav__link nav__link--effect" href="#">Buy</a>
+                        </li>
+                    </ul>
+                    <button class="btn__menu" onclick="openMenu()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="menu__droplist">
+                        <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <ul class="menu__links">
+                            <li class="menu__list">
+                                <a href="#" class="menu__link" onclick="closeMenu()">Log in</a>
+                            </li>
+                            <li class="menu__list">
+                                <a href="#" class="menu__link" onclick="closeMenu()">Search</a>
+                            </li>
+                            <li class="menu__list">
+                                <a href="#" class="menu__link" onclick="closeMenu()">Buy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <div class="header__wrapper">
@@ -47,6 +89,15 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="footer__wrapper">
+            <figure>
+                <img class="logo__footer" src=".//cinema-clapper-svgrepo-com.svg" alt="logo">
+            </figure>
+            <p class="footer__text">Copyright 2024 Movie Mania</p>
+        </div>
+    </footer>
 </body>
 
 </html>

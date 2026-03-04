@@ -77,5 +77,14 @@ function filterMovies(event) {
     renderMovies(moviesData); // Re-render the movies with the new sorted order
 }
 
+function openMenu() {
+    document.body.classList.add("open--menu");
+}
+
+function closeMenu() {
+    document.body.classList.remove("open--menu");
+}
+
+
 document.getElementById("searchButton").addEventListener("click", onSearchChange) //This is the "attachment". It tells
 //the browser: "When the user clicks the ID search button, run the onSearchChange function"
