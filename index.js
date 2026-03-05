@@ -48,10 +48,13 @@ async function onSearchChange() {
 
 function renderMovies(movies) { // This function takes the raw data and turns it into HTML
     const moviesWrapper = document.querySelector(".movies__wrapper");
+    const localFallback = "./assets/placeholder.png";
     moviesWrapper.innerHTML = movies.map(movie => { //It loops through all 10 movies and creates a <figure> block for each one
+    const posterUrl = movie.Poster !== "N/A" ?
+        movie.Poster : localFallback; 
         return `
             <figure class="movie__list">
-                <img src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Poster"}" alt="Movie Poster">
+                <img src="${posterUrl}" onerror="this.onerror=null;this.src='${localFallback}';" alt="Movie Poster">
                 <figcaption class="fig__caption fig__caption--title">${movie.Title}</figcaption>
                 <figcaption class="fig__caption">${movie.Year}</figcaption>
             </figure>
